@@ -26,11 +26,11 @@
 
 static char *replies[] = {
 /* 000 */ NULL,
-/* 001    RPL_WELCOME */  ":%s 001 %s :Welcome to the %s IRC Network %s!%s@%s",
-/* 002    RPL_YOURHOST */ ":%s 002 %s :Your host is %s, running version %s",
-/* 003    RPL_CREATED */  ":%s 003 %s :This server was created %s",
+/* 001    RPL_WELCOME */  ":%s 001 %s :Bienvenido al chat %s %s!%s@%s",
+/* 002    RPL_YOURHOST */ ":%s 002 %s :Tu host es %s, corriendo la version %s",
+/* 003    RPL_CREATED */  ":%s 003 %s :Este servidor fue creado el %s",
 /* 004    RPL_MYINFO */   ":%s 004 %s %s %s %s %s",
-/* 005    RPL_ISUPPORT */ ":%s 005 %s %s :are supported by this server",
+/* 005    RPL_ISUPPORT */ ":%s 005 %s %s :es soportado por este servidor",
 /* 006    RPL_MAP */      ":%s 006 %s :%s%-*s(%ld) %s",
 /* 007    RPL_MAPEND */   ":%s 007 %s :End of /MAP",
 /* 008    RPL_SNOMASK */  ":%s 008 %s :Server notice mask (%s)",
@@ -67,7 +67,7 @@ static char *replies[] = {
 /* 039 */ NULL,
 /* 040 */ NULL,
 /* 041 */ NULL,
-/* 042    RPL_YOURID */	":%s 042 %s %s :your unique ID",
+/* 042    RPL_YOURID */	":%s 042 %s %s :tu ID unico",
 /* 043 */ NULL, /* ircnet */
 /* 044 */ NULL,
 /* 045 */ NULL,
@@ -130,7 +130,7 @@ static char *replies[] = {
 /* 102 */ NULL,
 /* 103 */ NULL,
 /* 104 */ NULL,
-/* 105    RPL_REMOTEISUPPORT */ ":%s 105 %s %s :are supported by this server",
+/* 105    RPL_REMOTEISUPPORT */ ":%s 105 %s %s :es soportado por este servidor",
 /* 106 */ NULL,
 /* 107 */ NULL,
 /* 108 */ NULL,
@@ -248,7 +248,7 @@ static char *replies[] = {
 /* 216    RPL_STATSKLINE */ ":%s 216 %s %s %s %s",
 /* 217    RPL_STATSQLINE */ ":%s 217 %s %c %s %ld %ld %s :%s",
 /* 218    RPL_STATSYLINE */ ":%s 218 %s Y %s %d %d %d %d %d",
-/* 219    RPL_ENDOFSTATS */ ":%s 219 %s %c :End of /STATS report",
+/* 219    RPL_ENDOFSTATS */ ":%s 219 %s %c :Fin del reporte de /STATS",
 /* 220    RPL_STATSBLINE */ ":%s 220 %s %c %s %s %s %d %d",
 /* 221    RPL_UMODEIS */ ":%s 221 %s %s",
 /* 222    RPL_SQLINE_NICK */ ":%s 222 %s %s :%s",
@@ -271,7 +271,7 @@ static char *replies[] = {
 /* 239 */ NULL, /* ircnet */
 /* 240 */ NULL, /* rfc2812, austhex */
 /* 241    RPL_STATSLLINE */ ":%s 241 %s %c %s * %s %d %d",
-/* 242    RPL_STATSUPTIME */ ":%s 242 %s :Server Up %ld days, %ld:%02ld:%02ld",
+/* 242    RPL_STATSUPTIME */ ":%s 242 %s :Servidor en Linea %ld dias, %ld:%02ld:%02ld",
 /* 243    RPL_STATSOLINE */ ":%s 243 %s %c %s * %s %s %s",
 /* 244    RPL_STATSHLINE */ ":%s 244 %s %c %s * %s %d %d",
 /* 245    RPL_STATSSLINE */ ":%s 245 %s %c %s * %s %d %d",
@@ -279,12 +279,12 @@ static char *replies[] = {
 /* 247    RPL_STATSXLINE */ ":%s 247 %s X %s %d",
 /* 248    RPL_STATSULINE */ ":%s 248 %s U %s",
 /* 249 */ NULL, /* hybrid */
-/* 250    RPL_STATSCONN */ ":%s 250 %s :Highest connection count: %d (%d clients)",
-/* 251    RPL_LUSERCLIENT */ ":%s 251 %s :There are %d users and %d invisible on %d servers",
-/* 252    RPL_LUSEROP */   ":%s 252 %s %d :operator(s) online",
-/* 253    RPL_LUSERUNKNOWN */ ":%s 253 %s %d :unknown connection(s)",
-/* 254    RPL_LUSERCHANNELS */ ":%s 254 %s %d :channels formed",
-/* 255    RPL_LUSERME */    ":%s 255 %s :I have %d clients and %d servers",
+/* 250    RPL_STATSCONN */ ":%s 250 %s :Mayor conteo de conecciones: %d (%d clientes)",
+/* 251    RPL_LUSERCLIENT */ ":%s 251 %s :Hay %d usuarios y %d invisibles en %d servidor(es)",
+/* 252    RPL_LUSEROP */   ":%s 252 %s %d :operador(es) conectados",
+/* 253    RPL_LUSERUNKNOWN */ ":%s 253 %s %d :conexion(es) desconoci(das)",
+/* 254    RPL_LUSERCHANNELS */ ":%s 254 %s %d :canales formados",
+/* 255    RPL_LUSERME */    ":%s 255 %s :Tengo %d clientes y %d servidor(es)",
 /* 256    RPL_ADMINME */    ":%s 256 %s :Administrative info about %s",
 /* 257    RPL_ADMINLOC1 */  ":%s 257 %s :%s",
 /* 258    RPL_ADMINLOC2 */  ":%s 258 %s :%s",
@@ -294,14 +294,14 @@ static char *replies[] = {
 /* 262 */ NULL, /* rfc2812 */
 /* 263 */ NULL, /* rfc2812 */
 /* 264 */ NULL,
-/* 265    RPL_LOCALUSERS */ ":%s 265 %s %d %d :Current local users %d, max %d",
-/* 266    RPL_GLOBALUSERS */ ":%s 266 %s %d %d :Current global users %d, max %d",
+/* 265    RPL_LOCALUSERS */ ":%s 265 %s %d %d :Usuarios locales actuales %d, maximo %d",
+/* 266    RPL_GLOBALUSERS */ ":%s 266 %s %d %d :Usuarios globales actuales %d, maximo %d",
 /* 267 */ NULL, /* aircd */
 /* 268 */ NULL, /* aircd */
 /* 269 */ NULL, /* aircd */
 /* 270 */ NULL, /* ircu */
 /* 271    RPL_SILELIST */ ":%s 271 %s %s %s",
-/* 272    RPL_ENDOFSILELIST */ ":%s 272 %s :End of Silence List",
+/* 272    RPL_ENDOFSILELIST */ ":%s 272 %s :Fin de la Silence List",
 /* 273 */ NULL, /* aircd */
 /* 274 */ NULL, /* ircnet */
 /* 275    RPL_STATSDLINE */ ":%s 275 %s %c %s %s",
@@ -323,8 +323,8 @@ static char *replies[] = {
 /* 291 */ NULL, /* aircd, quakenet */
 /* 292 */ NULL, /* aircd */
 /* 293 */ NULL, /* aircd */
-/* 294    RPL_HELPFWD */ ":%s 294 %s :Your help-request has been forwarded to Help Operators",
-/* 295    RPL_HELPIGN */ ":%s 295 %s :Your address has been ignored from forwarding",
+/* 294    RPL_HELPFWD */ ":%s 294 %s :Su solicitud de ayuda ha sido enviada a los operadores de ayuda",
+/* 295    RPL_HELPIGN */ ":%s 295 %s :Su dirección ha sido ignorada del reenvío",
 /* 296 */ NULL, /* aircd */
 /* 297 */ NULL,
 /* 298 */ NULL, /* Used */
@@ -334,55 +334,55 @@ static char *replies[] = {
 /* 302    RPL_USERHOST */ ":%s 302 %s :%s %s %s %s %s",
 /* 303    RPL_ISON */ ":%s 303 %s :",
 /* 304 */ NULL, /* RPL_TEXT */
-/* 305    RPL_UNAWAY */ ":%s 305 %s :You are no longer marked as being away",
-/* 306    RPL_NOWAWAY */ ":%s 306 %s :You have been marked as being away",
-/* 307    RPL_WHOISREGNICK */ ":%s 307 %s %s :is identified for this nick",
-/* 308    RPL_RULESSTART */ ":%s 308 %s :- %s Server Rules - ",
-/* 309    RPL_ENDOFRULES */ ":%s 309 %s :End of RULES command.",
-/* 310    RPL_WHOISHELPOP */ ":%s 310 %s %s :is available for help.",
+/* 305    RPL_UNAWAY */ ":%s 305 %s :Ya no estás marcado como ausente",
+/* 306    RPL_NOWAWAY */ ":%s 306 %s :Has sido marcado como ausente",
+/* 307    RPL_WHOISREGNICK */ ":%s 307 %s %s :se identifica para este nick",
+/* 308    RPL_RULESSTART */ ":%s 308 %s :- %s Reglas del servidor - ",
+/* 309    RPL_ENDOFRULES */ ":%s 309 %s :Fin del comando RULES.",
+/* 310    RPL_WHOISHELPOP */ ":%s 310 %s %s :está disponible para ayuda.",
 /* 311    RPL_WHOISUSER */ ":%s 311 %s %s %s %s * :%s",
 /* 312    RPL_WHOISSERVER */ ":%s 312 %s %s %s :%s",
 /* 313    RPL_WHOISOPERATOR */ ":%s 313 %s %s :is %s",
 /* 314    RPL_WHOWASUSER */ ":%s 314 %s %s %s %s * :%s",
-/* 315    RPL_ENDOFWHO */ ":%s 315 %s %s :End of /WHO list.",
+/* 315    RPL_ENDOFWHO */ ":%s 315 %s %s :Fin de la lista /WHO.",
 /* 316 */ NULL, /* rfc1459 */
 /* 317    RPL_WHOISIDLE */ ":%s 317 %s %s %ld %ld :seconds idle, signon time",
-/* 318    RPL_ENDOFWHOIS */ ":%s 318 %s %s :End of /WHOIS list.",
+/* 318    RPL_ENDOFWHOIS */ ":%s 318 %s %s :Fin de la lista /WHOIS.",
 /* 319    RPL_WHOISCHANNELS */ ":%s 319 %s %s :%s",
 /* 320    RPL_WHOISSPECIAL */ ":%s 320 %s %s :%s",
-/* 321    RPL_LISTSTART */ ":%s 321 %s Channel :Users  Name",
+/* 321    RPL_LISTSTART */ ":%s 321 %s Canal :Usuarios Nombre",
 #ifndef LIST_SHOW_MODES
 /* 322    RPL_LIST */ ":%s 322 %s %s %d :%s",
 #else
 /* 322    RPL_LIST */ ":%s 322 %s %s %d :%s %s",
 #endif
-/* 323    RPL_LISTEND */ ":%s 323 %s :End of /LIST",
+/* 323    RPL_LISTEND */ ":%s 323 %s :Fin de /LIST",
 /* 324    RPL_CHANNELMODEIS */ ":%s 324 %s %s %s %s",
 /* 325 */ NULL, /* rfc2812 */
 /* 326 */ NULL, /* Used */
 /* 327 */ NULL, /* Used */
 /* 328 */ NULL, /* bahamut, austhex */
 /* 329    RPL_CREATIONTIME */ ":%s 329 %s %s %lu",
-/* 330    RPL_WHOISLOGGEDIN */ ":%s 330 %s %s %s :is logged in as", 
-/* 331    RPL_NOTOPIC */ ":%s 331 %s %s :No topic is set.",
+/* 330    RPL_WHOISLOGGEDIN */ ":%s 330 %s %s %s :está conectado como", 
+/* 331    RPL_NOTOPIC */ ":%s 331 %s %s :No hay tema definido.",
 /* 332    RPL_TOPIC */ ":%s 332 %s %s :%s",
 /* 333    RPL_TOPICWHOTIME */ ":%s 333 %s %s %s %lu",
 /* 334    RPL_LISTSYNTAX */ ":%s 334 %s :%s",
-/* 335    RPL_WHOISBOT */ ":%s 335 %s %s :is a \2Bot\2 on %s",
+/* 335    RPL_WHOISBOT */ ":%s 335 %s %s :es un \2Bot\2 en %s",
 /* 336    RPL_INVITELIST */ ":%s 336 %s :%s",
-/* 337    RPL_ENDOFINVITELIST */ ":%s 337 %s :End of /INVITE list.",
+/* 337    RPL_ENDOFINVITELIST */ ":%s 337 %s :Fin de la lista /INVITE.",
 /* 338 */ NULL, /* ircu, bahamut */
 /* 339 */ NULL, /* Used */
 /* 340    RPL_USERIP */ ":%s 340 %s :%s %s %s %s %s",
 /* 341    RPL_INVITING */ ":%s 341 %s %s %s",
-/* 342    RPL_SUMMONING */ ":%s 342 %s %s :User summoned to irc",
+/* 342    RPL_SUMMONING */ ":%s 342 %s %s :Usuario convocado a irc",
 /* 343 */ NULL,
 /* 344 */ NULL,
 /* 345 */ NULL, /* gamesurge */
 /* 346    RPL_INVEXLIST */ ":%s 346 %s %s %s %s %lu",
-/* 347    RPL_ENDOFINVEXLIST */ ":%s 347 %s %s :End of Channel Invite List",
+/* 347    RPL_ENDOFINVEXLIST */ ":%s 347 %s %s :Fin de la lista Channel Invite",
 /* 348    RPL_EXLIST */ ":%s 348 %s %s %s %s %lu",
-/* 349    RPL_ENDOFEXLIST */ ":%s 349 %s %s :End of Channel Exception List",
+/* 349    RPL_ENDOFEXLIST */ ":%s 349 %s %s :Fin de la lista Channel Exception",
 /* 350 */ NULL,
 /* 351    RPL_VERSION */ ":%s 351 %s %s.%s %s :%s%s%s [%s=%d]",
 /* 352    RPL_WHOREPLY */ ":%s 352 %s %s %s %s %s %s %s :%d %s",
@@ -395,8 +395,8 @@ static char *replies[] = {
 /* 359 */ NULL, /* austhex */
 /* 360 */ NULL,
 /* 361 */ NULL, /* rfc1459 */
-/* 362    RPL_CLOSING */ ":%s 362 %s %s :Closed. Status = %d",
-/* 363    RPL_CLOSEEND */ ":%s 363 %s %d: Connections Closed",
+/* 362    RPL_CLOSING */ ":%s 362 %s %s :Cerrado. Status = %d",
+/* 363    RPL_CLOSEEND */ ":%s 363 %s %d: Connecciones Cerradas",
 /* 364    RPL_LINKS */ ":%s 364 %s %s %s :%d %s",
 /* 365    RPL_ENDOFLINKS */ ":%s 365 %s %s :End of /LINKS list.",
 /* 366    RPL_ENDOFNAMES */ ":%s 366 %s %s :End of /NAMES list.",
@@ -408,16 +408,16 @@ static char *replies[] = {
 /* 372    RPL_MOTD */ ":%s 372 %s :- %s",
 /* 373    RPL_INFOSTART */ ":%s 373 %s :Server INFO",
 /* 374    RPL_ENDOFINFO */ ":%s 374 %s :End of /INFO list.",
-/* 375    RPL_MOTDSTART */ ":%s 375 %s :- %s Message of the Day - ",
-/* 376    RPL_ENDOFMOTD */ ":%s 376 %s :End of /MOTD command.",
+/* 375    RPL_MOTDSTART */ ":%s 375 %s :- %s Mensaje del dia - ",
+/* 376    RPL_ENDOFMOTD */ ":%s 376 %s :Fin del comando /MOTD.",
 /* 377 */ NULL, /* aircd, austhex */
-/* 378    RPL_WHOISHOST */ ":%s 378 %s %s :is connecting from %s@%s %s",
-/* 379    RPL_WHOISMODES */ ":%s 379 %s %s :is using modes %s %s",
+/* 378    RPL_WHOISHOST */ ":%s 378 %s %s :se está conectando desde %s@%s %s",
+/* 379    RPL_WHOISMODES */ ":%s 379 %s %s :está usando modos %s %s",
 /* 380 */ NULL, /* aircd, austhex */
-/* 381    RPL_YOUREOPER */ ":%s 381 %s :You are now an IRC Operator",
+/* 381    RPL_YOUREOPER */ ":%s 381 %s :Ahora eres un Operador de IRC",
 /* 382    RPL_REHASHING */ ":%s 382 %s %s :Rehashing",
 /* 383 */ NULL, /* rfc2812 */
-/* 384    RPL_MYPORTIS */ ":%s 384 %s %d :Port to local server is\r\n",
+/* 384    RPL_MYPORTIS */ ":%s 384 %s %d :Puerto al servidor local es\r\n",
 /* 385 */ NULL, /* austhex, hybrid */
 /* 386    RPL_QLIST */ ":%s 386 %s %s %s",
 /* 387    RPL_ENDOFQLIST */ ":%s 387 %s %s :End of Channel Owner List",
